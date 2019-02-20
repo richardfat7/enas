@@ -8,7 +8,7 @@ python src/ptb/main.py \
   --search_for="enas" \
   --reset_output_dir \
   --data_path="data/ptb/ptb.pkl" \
-  --output_dir="outputs" \
+  --output_dir="/data/ssd/public/wfcheng6/outputs" \
   --batch_size=64 \
   --child_bptt_steps=35 \
   --num_epochs=2000 \

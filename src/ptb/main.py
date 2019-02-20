@@ -237,8 +237,14 @@ def train(mode="train"):
 
     print("-" * 80)
     print("Starting session")
+    config = tf.ConfigProto()
+    # use GPU1
+    config.gpu_options.visible_device_list = '1,2,4,7'
+    # allocate 50% of GPU memory
+    config.gpu_options.allow_growth = True
+    config.gpu_options.per_process_gpu_memory_fraction = 0.7
     with tf.train.SingularMonitoredSession(
-      hooks=hooks, checkpoint_dir=FLAGS.output_dir) as sess:
+      config=config, hooks=hooks, checkpoint_dir=FLAGS.output_dir) as sess:
         start_time = time.time()
 
         if mode == "eval":

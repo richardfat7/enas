@@ -6,7 +6,7 @@ python src/ptb/main.py \
   --search_for="enas" \
   --noreset_output_dir \
   --data_path="data/ptb/ptb.pkl" \
-  --output_dir="outputs" \
+  --output_dir="/data/ssd/public/wfcheng6/outputs" \
   --batch_size=20 \
   --child_bptt_steps=35 \
   --num_epochs=100 \
