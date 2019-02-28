@@ -95,25 +95,6 @@ class GeneralChild(Model):
     pool_distance = self.num_layers // 3
     self.pool_layers = [pool_distance - 1, 2 * pool_distance - 1]
 
-  def _get_C(self, x):
-    """
-    Args:
-      x: tensor of shape [N, H, W, C] or [N, C, H, W]
-    """
-    if self.data_format == "NHWC":
-      return x.get_shape()[3].value
-    elif self.data_format == "NCHW":
-      return x.get_shape()[1].value
-    else:
-      raise ValueError("Unknown data_format '{0}'".format(self.data_format))
-
-  def _get_HW(self, x):
-    """
-    Args:
-      x: tensor of shape [N, H, W, C] or [N, C, H, W]
-    """
-    return x.get_shape()[2].value
-
   def _get_strides(self, stride):
     """
     Args:
