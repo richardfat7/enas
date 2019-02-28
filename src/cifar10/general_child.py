@@ -291,7 +291,7 @@ class GeneralChild(Model):
           y = self._pool_branch(inputs, is_training, out_filters, "max",
                                 start_idx=0)
         branches[tf.equal(count, 5)] = lambda: y
-      out = tf.case(branches, default=lambda: tf.constant(0, tf.float32),
+      out = tf.case(branches, default=lambda: tf.constant(0, tf.float32, shape=[self.batch_size, out_filters, inp_h, inp_w]),
                     exclusive=True)
 
       if self.data_format == "NHWC":
@@ -403,10 +403,24 @@ class GeneralChild(Model):
           out = tf.nn.conv2d(out, w, [1, 1, 1, 1], "SAME",
                              data_format=self.data_format)
           out = batch_norm(out, is_training, data_format=self.data_format)
-      elif count == 4:
-        pass
-      elif count == 5:
-        pass
+      elif count == 4 or count == 5:
+        with tf.variable_scope("conv_1x1"):
+	  w = create_weight("w", [1, 1, inp_c, out_filters])
+          out = tf.nn.relu(inputs)
+          out = tf.nn.conv2d(out, w, [1, 1, 1, 1], "SAME",
+                             data_format=self.data_format)
+          out = batch_norm(out, is_training, data_format=self.data_format)
+	with tf.variable_scope("pool"):
+	  if self.data_format == "NHWC":
+	    actual_data_format = "channels_last"
+	  elif self.data_format == "NCHW":
+	    actual_data_format = "channels_first"
+	  if count == 4:
+	    out = tf.layers.average_pooling2d(
+	      out, [3, 3], [1, 1], "SAME", data_format=actual_data_format)
+	  elif count == 5:
+	    out = tf.layers.max_pooling2d(
+	      out, [3, 3], [1, 1], "SAME", data_format=actual_data_format)
       else:
         raise ValueError("Unknown operation number '{0}'".format(count))
     else:

@@ -2,48 +2,60 @@
 
 export PYTHONPATH="$(pwd)"
 
-fixed_arc="0"
-fixed_arc="$fixed_arc 3 0"
-fixed_arc="$fixed_arc 0 1 0"
-fixed_arc="$fixed_arc 2 0 0 1"
-fixed_arc="$fixed_arc 2 0 0 0 0"
-fixed_arc="$fixed_arc 3 1 1 0 1 0"
-fixed_arc="$fixed_arc 2 0 0 0 0 0 1"
-fixed_arc="$fixed_arc 2 0 1 1 0 1 1 1"
-fixed_arc="$fixed_arc 1 0 1 1 1 0 1 0 1"
-fixed_arc="$fixed_arc 0 0 0 0 0 0 0 0 0 0"
-fixed_arc="$fixed_arc 2 0 0 0 0 0 1 0 0 0 0"
-fixed_arc="$fixed_arc 0 1 0 0 1 1 0 0 0 0 1 1"
-fixed_arc="$fixed_arc 2 0 1 0 0 0 0 0 1 0 1 1 0"
-fixed_arc="$fixed_arc 1 0 0 1 0 0 0 1 1 1 0 1 0 1"
-fixed_arc="$fixed_arc 0 1 1 0 1 0 1 0 0 0 0 0 1 0 0"
-fixed_arc="$fixed_arc 2 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1"
-fixed_arc="$fixed_arc 2 0 1 0 0 0 1 0 0 1 1 1 1 0 0 1 0"
-fixed_arc="$fixed_arc 2 0 0 0 0 1 0 1 0 1 0 0 1 0 1 0 0 1"
-fixed_arc="$fixed_arc 3 0 1 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0"
-fixed_arc="$fixed_arc 3 0 1 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1"
-fixed_arc="$fixed_arc 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 1 1 0 0"
-fixed_arc="$fixed_arc 3 0 1 0 1 1 0 0 1 0 1 1 0 1 1 0 1 0 0 1 0 0"
-fixed_arc="$fixed_arc 0 1 0 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0"
-fixed_arc="$fixed_arc 0 1 1 0 0 0 1 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 0"
+#fixed_arc="0"
+#fixed_arc="$fixed_arc 3 0"
+#fixed_arc="$fixed_arc 0 1 0"
+#fixed_arc="$fixed_arc 2 0 0 1"
+#fixed_arc="$fixed_arc 2 0 0 0 0"
+#fixed_arc="$fixed_arc 3 1 1 0 1 0"
+#fixed_arc="$fixed_arc 2 0 0 0 0 0 1"
+#fixed_arc="$fixed_arc 2 0 1 1 0 1 1 1"
+#fixed_arc="$fixed_arc 1 0 1 1 1 0 1 0 1"
+#fixed_arc="$fixed_arc 0 0 0 0 0 0 0 0 0 0"
+#fixed_arc="$fixed_arc 2 0 0 0 0 0 1 0 0 0 0"
+#fixed_arc="$fixed_arc 0 1 0 0 1 1 0 0 0 0 1 1"
+#fixed_arc="$fixed_arc 2 0 1 0 0 0 0 0 1 0 1 1 0"
+#fixed_arc="$fixed_arc 1 0 0 1 0 0 0 1 1 1 0 1 0 1"
+#fixed_arc="$fixed_arc 0 1 1 0 1 0 1 0 0 0 0 0 1 0 0"
+#fixed_arc="$fixed_arc 2 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1"
+#fixed_arc="$fixed_arc 2 0 1 0 0 0 1 0 0 1 1 1 1 0 0 1 0"
+#fixed_arc="$fixed_arc 2 0 0 0 0 1 0 1 0 1 0 0 1 0 1 0 0 1"
+#fixed_arc="$fixed_arc 3 0 1 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0"
+#fixed_arc="$fixed_arc 3 0 1 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1"
+#fixed_arc="$fixed_arc 0 1 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 1 1 0 0"
+#fixed_arc="$fixed_arc 3 0 1 0 1 1 0 0 1 0 1 1 0 1 1 0 1 0 0 1 0 0"
+#fixed_arc="$fixed_arc 0 1 0 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0"
+#fixed_arc="$fixed_arc 0 1 1 0 0 0 1 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 0"
 
+fixed_arc="1"
+fixed_arc="$fixed_arc 4 0"
+fixed_arc="$fixed_arc 2 0 0"
+fixed_arc="$fixed_arc 4 0 1 1"
+fixed_arc="$fixed_arc 3 0 0 1 1"
+fixed_arc="$fixed_arc 0 0 0 0 1 0"
+fixed_arc="$fixed_arc 5 0 0 1 0 0 1"
+fixed_arc="$fixed_arc 2 1 0 0 0 0 1 1"
+fixed_arc="$fixed_arc 5 0 1 0 0 0 0 1 1"
+fixed_arc="$fixed_arc 1 0 0 0 1 0 0 1 0 0"
+fixed_arc="$fixed_arc 4 0 0 0 0 0 0 1 0 0 0"
+fixed_arc="$fixed_arc 3 0 1 1 0 1 1 0 0 1 1 1"
 
 python src/cifar10/main.py \
   --data_format="NCHW" \
   --search_for="macro" \
   --reset_output_dir \
-  --data_path="data/cifar10" \
-  --output_dir="outputs" \
-  --batch_size=100 \
+  --data_path="/data/ssd/public/ksng6/data/cifar-10-batches-py" \
+  --output_dir="/data/ssd/public/ksng6/output/final" \
+  --batch_size=128 \
   --num_epochs=310 \
   --log_every=50 \
   --eval_every_epochs=1 \
   --child_fixed_arc="${fixed_arc}" \
   --child_use_aux_heads \
-  --child_num_layers=24 \
-  --child_out_filters=96 \
+  --child_num_layers=12 \
+  --child_out_filters=36 \
   --child_l2_reg=2e-4 \
-  --child_num_branches=4 \
+  --child_num_branches=6 \
   --child_num_cell_layers=5 \
   --child_keep_prob=0.50 \
   --child_lr_cosine \
