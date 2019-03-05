@@ -1,3 +1,14 @@
+# Reference
+GAN intro: https://zhuanlan.zhihu.com/p/25095905
+
+
+
+
+
+
+
+
+
 # Efficient Neural Architecture Search via Parameter Sharing
 
 Authors' implementation of "Efficient Neural Architecture Search via Parameter Sharing" (2018) in TensorFlow.
