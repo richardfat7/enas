@@ -1,6 +1,6 @@
 # Reference
 GAN intro: https://zhuanlan.zhihu.com/p/25095905
-
+Policy gradient intro: https://zhuanlan.zhihu.com/p/21725498
 
 
 
